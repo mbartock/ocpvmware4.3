@@ -1,0 +1,13 @@
+---
+# defaults file for upload_ocp_template
+
+tmp_space: "/tmp/ocp4"
+ocp_ova: "{{ v_rhcos_ova }}"
+ocp_ova_url: "{{ v_rhcos_ova_url }}"
+
+govc_username: "{{ vcenter_username }}" # overrides GOVC_USERNAME
+govc_password: "{{ vcenter_password }}" # overrides GOVC_PASSWORD
+govc_url: "https://{{ vcenter_ip }}/sdk"
+govc_datastore: "{{ target_esx_datastore }}"
+govc_cluster: "{{ vcenter_cluster }}"
+govc_insecure: 1

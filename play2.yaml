@@ -1,0 +1,15 @@
+- hosts: kvmhost
+  roles:
+    - update_vcenter
+    - create_helper_vm
+    - upload_ocp_template
+    
+
+    
+- hosts: kvmguest
+  vars:
+    ansible_python_interpreter: "/usr/bin/python"
+  roles:
+     - pre_ocp_setup
+   
+

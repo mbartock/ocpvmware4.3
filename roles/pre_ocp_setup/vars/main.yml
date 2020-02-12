@@ -1,0 +1,6 @@
+---
+# vars file for ocp_setup_tasks
+
+ocp_client: "{{v_ocp_client}}"
+ocp_installer: "{{v_ocp_installer}}"
+ocp_terraform: "{{v_ocp_terraform}}"

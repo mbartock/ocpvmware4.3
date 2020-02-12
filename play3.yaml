@@ -1,0 +1,12 @@
+- hosts: kvmhost
+  roles:
+    - get_ocp_vm_info   
+
+    
+- hosts: kvmguest
+  vars:
+    ansible_python_interpreter: "/usr/bin/python"
+  roles:
+     - update_helper_vm
+   
+
