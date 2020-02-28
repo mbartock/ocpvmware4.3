@@ -34,7 +34,6 @@
      - helper
      - rhcos-latest
      - bootstrap-0
-  when: remove_vcenter | bool
   delegate_to: localhost
   
 
