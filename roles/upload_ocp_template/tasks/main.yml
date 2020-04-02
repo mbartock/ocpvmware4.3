@@ -48,6 +48,11 @@
     delegate_to: localhost
    
    
+  - name: Create temporary VM Netowrk Mapping File
+    copy:
+      dest: "{{ tmp_space }}/options.json"
+      content: "{\"NetworkMapping\":[{\"Name\":\"VM Network\",\"Network\":\"{{ govc_network }}\"}]}"
+   
   - name: Upload OCP OVA file  "{{ ocp_ova  }}"
     command: govc import.ova -name=rhcos-latest "{{ tmp_space }}/{{ ocp_ova }}"
     environment:
