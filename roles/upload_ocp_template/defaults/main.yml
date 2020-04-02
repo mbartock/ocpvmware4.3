@@ -10,4 +10,5 @@ govc_password: "{{ vcenter_password }}" # overrides GOVC_PASSWORD
 govc_url: "https://{{ vcenter_ip }}/sdk"
 govc_datastore: "{{ target_esx_datastore }}"
 govc_cluster: "{{ vcenter_cluster }}"
+govc_network: "{{ target_esx_portgroup }}"
 govc_insecure: 1
